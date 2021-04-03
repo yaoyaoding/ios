@@ -3,6 +3,7 @@ body, td, th {
 }
 h2 {
   margin-top: 3ex;
+  /*text-align: center;*/
 }
 .color-primary-0 { color: #A83738 }  /* Main Primary color */
 .color-primary-1 { color: #D95242 }
@@ -117,8 +118,8 @@ figcaption {
 @media (min-width: 576px) {
   .nd-pageheader {
     padding-top:4rem;
-    padding-bottom: 4rem;
-    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
