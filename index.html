@@ -1,0 +1,150 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <title>IOS: Inter-Operator Scheduler for CNN Acceleration</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        .paperthumb {
+            float: left;
+            width: 120px;
+            margin: 3px 10px 7px 0;
+        }
+
+        .paperdesc {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body class="nd-docs">
+<div class="nd-pageheader">
+    <div class="container">
+        <p class="lead">
+        <p style="font-size:36px"><b>IOS: Inter-Operator Scheduler for CNN Acceleration</b></p>
+        <br>
+        <address>
+            <!--     <nobr><a href="https://yaoyaoding.com/">Yaoyao Ding</a><sup>*,1,2</sup>,</nobr>-->
+            <nobr><a href="https://yaoyaoding.com/">Yaoyao Ding</a><sup>1,2</sup>,</nobr>
+            <nobr><a href="https://lzhu.me/">Ligeng Zhu</a><sup>3</sup></nobr>
+            <nobr><a href="https://cs.stanford.edu/~zhihao/">Zhihao Jia</a><sup>4</sup></nobr>
+            <nobr><a href="http://www.cs.toronto.edu/~pekhimenko/">Gennady Pekhimenko</a><sup>1,2</sup></nobr>
+            <nobr><a href="https://songhan.mit.edu/">Song Han</a><sup>4</sup></nobr>
+            <br>
+            <nobr><sup>1</sup>University of Toronto,</nobr>
+            <nobr><sup>2</sup>Vector Institute,</nobr>
+            <nobr><sup>3</sup>Massachusetts Institute of Technology,</nobr>
+            <nobr><sup>4</sup>Carnegie Mellon University</nobr>
+            <br>
+            <br>
+            <nobr> In <a href="https://mlsys.org/">Proceedings of Machine Learning and Systems 2 (MLSys 2020)</a></nobr>
+            <br>
+            <br>
+            <nobr>This website is under <strong>construction</strong></nobr>
+
+            <!--     <br>-->
+            <!--     <nobr><sup>*</sup>Work done w internship at MIT-HAN lab.</nobr>-->
+        </address>
+        </p>
+    </div>
+</div> <!-- end nd-pageheader -->
+
+<div class="container">
+
+    <div class="row">
+        <div class="col text-center">
+            <p>
+                <a href="https://proceedings.mlsys.org/paper/2021/file/38b3eff8baf56627478ec76a704e9b52-Paper.pdf" class="d-inline-block p-3">
+                    <img height="100" src="figures/paper-thumbnail.png" style="border:1px solid" data-nothumb>
+                    <br>
+                    MLSys'21 Paper
+                </a>
+                <a href="files/ios-oral-slides.pdf" class="d-inline-block p-3">
+                    <!--         <img src="figures/slides-thumbnail.png" style="border:1px solid; margin-bottom:16px" height="100" data-nothumb>-->
+                    <img src="figures/slides-thumbnail.png" style="border:1px solid" height="100" data-nothumb>
+                    <br>
+                    MLSys'21 Slides
+                </a>
+                <a href="https://github.com/mit-han-lab/inter-operator-scheduler" class="d-inline-block p-3">
+                    <img height="100" src="figures/github-thumbnail.png" style="border:1px solid" data-nothumb>
+                    <br>
+                    GitHub
+                </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <p>
+                To accelerate CNN inference, existing deep learning frameworks focus on optimizing <strong>intra-operator
+                parallelization</strong>. However, a single operator can no longer fully utilize the available parallelism given the rapid advances
+                in high-performance hardware, resulting in a large gap between the peak performance and the real performance.
+                This performance gap is more severe under smaller batch sizes. In this work, we extensively study the
+                <strong>parallelism between operators</strong> and propose <strong>Inter-Operator Scheduler (IOS)</strong> to automatically schedule multiple
+                operators' parallel execution through a novel dynamic programming algorithm. IOS consistently outperforms
+                state-of-the-art libraries (e.g., TensorRT) by <strong>1.1 to 1.5x</strong> on modern CNN benchmarks.
+            </p>
+            <h2>Introduction</h2>
+            To come soon.
+            <!--            <center class="embed-responsive embed-responsive-16by9">-->
+            <!--                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/h6zbQe5U1v4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+            <!--            </center>-->
+            <h2>Inter-Operator Scheduler (IOS)</h2>
+            To come soon.
+            <h2>Parallelization Strategies in IOS</h2>
+            To come soon.
+            <h2>Transition Graph and Time Complexity</h2>
+            To come soon.
+<!--            <h2>Inter-Operator Scheduler (IOS)</h2>-->
+
+<!--            <p>Our paper presents a hardware-efficient primitive for 3D deep learning:</p>-->
+<!--            <p style="text-align: center"><img src="figures/overview.png" style="max-width:75%"></p>-->
+<!--            <ol>-->
+<!--                <li>Its point-based branch keeps the input in a high resolution.</li>-->
+<!--                <li>Its voxel-based branch conducts the convolution over lower-resolution voxels to extract the neighborhood information.</li>-->
+<!--            </ol>-->
+
+<!--            <h2>Results on S3DIS</h2>-->
+<!--            <p style="text-align: center">-->
+<!--                <img src="figures/gif/PVCNN-livedemo-p1-1080p.gif" style="width:350px">-->
+<!--                <img src="figures/gif/PVCNN-livedemo-p2-1080p.gif" style="width:350px">-->
+<!--                <img src="figures/gif/PVCNN-livedemo-p3-1080p.gif" style="width:350px">-->
+<!--            </p>-->
+
+<!--            <h2>Introduction Video</h2>-->
+<!--            <center class="embed-responsive embed-responsive-16by9">-->
+<!--                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/h6zbQe5U1v4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--            </center>-->
+
+
+<!--            <h2>MIT Driverless</h2>-->
+<!--            <center class="embed-responsive embed-responsive-16by9">-->
+<!--                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/WW9paispAW0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--            </center>-->
+
+            <h2>Citation</h2>
+
+            <pre class="highlight">To come soon.</pre>
+
+            <p><strong>Acknowledgments</strong>: We want to thank Xiaodan (Serina) Tan for NVIDIA GPUrelated issues and
+            constructive discussion. This project was supported by the Canada Foundation for Innovation JELF grant,
+                NSERC Discovery grant, AWS Machine Learning Research Award, Facebook Faculty Research Award, MIT-IBM
+                Watson AI Lab, MIT Data Science and AI Lab (DSAIL), NVIDIA, and NSF CAREER Award #1943349.</p>
+
+        </div>
+    </div> <!-- row -->
+
+</div> <!-- container -->
+
+</body>
+
+</html>
